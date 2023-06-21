@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon48.png",
+      "default_popup": "index.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "script.js" ],
+      "matches": [ "https://www.nfe.fazenda.gov.br/*", "https://www.cte.fazenda.gov.br/*", "https://*.fsist.com.br/*" ]
+   } ],
+   "description": "Extensão para lhe ajudar a gerar um DANFe/DACTe utilizando o xml ou o portal nacional da fazenda.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhrOUMhFUE8F3B93H3x9FbTMeUfpfSoSB7WXGn/VX2nYcbvovfVgO3b3gipiYsRCiquE+aL/qHOFm2sy0yspFaQS0g2iG2K3u4lRj7K82PK8c8NrXmwvDxb0RB16jIWUzb3no+SuFFSAxEFlF4QQErf8z8UEVBxXfU0OTKgcn7E7qdchIH3GuulFkS/OO0vKDKDQFOYWxmbLXI1W9frQdBMIyI/k03I2ypIdyirS1VWuSIRI0IOfQDJMavEuPbsC5C7fYdUWKecVk3lU3Br/J19kUqgTgjgYDHQi05mR1Bk9e2lYEemG90iDIimhAUZdsiZh6XFK/jrJF+FR5lAR2XQIDAQAB",
+   "manifest_version": 2,
+   "name": "Gerar DANFe/DACTe",
+   "permissions": [ "https://www.fsist.com.br/", "https://www.nfe.fazenda.gov.br/", "https://www.cte.fazenda.gov.br/", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.5.0"
+}
